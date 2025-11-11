@@ -34,6 +34,10 @@ def hello():
 def create(item: Item):
     return {"ok": True, "item": item}
 
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
 # --- FFT helpers ---
 def signal(x):
     return np.sin(5*x) * np.cos(9*x)
